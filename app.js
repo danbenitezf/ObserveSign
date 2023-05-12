@@ -20,12 +20,6 @@ const getTasks = async () => {
   }
 };
 
-const getImgMeta = (url, cb) => {
-  const img = new Image();
-  img.onload = () => cb(null, img);
-  img.onerror = (err) => cb(err);
-  img.src = url;
-};
 
 const verifyLabel = (label, validLabels) => {
   const validLabel = validLabels.includes(label);
